@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
 
-  console.log(req.params.id);``
+  // console.log(req.params.id);
 
   const movieToGrab = [req.params.id]
 
@@ -33,7 +33,8 @@ router.get('/:id', (req, res) => {
 
   pool.query(query, movieToGrab)
     .then(result => {
-      res.send(result.rows);
+      console.log('in router result.rows is:', result.rows);
+      res.send(result.rows[0]);
     })
     .catch(err => {
       console.log('ERROR: Get all movies', err);

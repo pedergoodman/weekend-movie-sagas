@@ -39,6 +39,7 @@ function* fetchMovieDetails(action) {
         console.log('selected movie:', details.data);
 
         // PUT to STORE
+        yield put({type: 'SET_CURRENT_DETAIL', payload: details.data })
 
     } catch (err) {
         console.log('error grabbing movieDetails', err);

@@ -24,12 +24,12 @@ export default function MovieDetails() {
   return (
     <div>
       <pre>{id}</pre>
-      <pre>{movieDetails}</pre>
-      <img src="" alt="" />
+      <pre>{JSON.stringify(movieDetails)}</pre>
+      <img src={movieDetails.poster} alt={movieDetails.title} />
       <div>
-        <h1>MOVIE TITLE</h1>
-        <p>description</p>
-        <p>genres</p>
+        <h1>{movieDetails.title}</h1>
+        <p>{movieDetails.description}</p>
+        <p>{movieDetails.genres}</p>
       </div>
       <Button>Back to list</Button>
     </div>
