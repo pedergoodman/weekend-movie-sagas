@@ -1,10 +1,20 @@
 import { Button } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
+
 
 
 export default function MovieDetails() {
   const { id } = useParams()
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch({
+      type: 'FETCH_MOVIE_DETAILS',
+      payload: id
+    })
+  }, [])
   
   console.log('useParams is', useParams());
   return (
