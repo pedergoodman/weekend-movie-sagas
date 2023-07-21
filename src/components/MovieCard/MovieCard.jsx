@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function ({ movie }) {
+export default function MovieCard({ movie }) {
 
   const handleCardClick = () => {
     
@@ -17,8 +17,8 @@ export default function ({ movie }) {
 
 
   return (
-    <div>
-      <Card sx={{ width: 275, height: 350 }}>
+    <>
+      <Card sx={{ m:'12px 10px', width: 250, height: 350 }}>
         <CardActionArea onClick={handleCardClick}>
           <CardMedia
             component="img"
@@ -34,6 +34,6 @@ export default function ({ movie }) {
         </CardActionArea>
       </Card>
 
-    </div>
+    </>
   );
 }
