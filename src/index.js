@@ -34,13 +34,15 @@ function* fetchMovieDetails(action) {
     // get details of selected movie
     console.log('in fetchMovieDetails, id is:', action.payload);
 
-    // try {
-    //     const details = yield axios.get('api/movie/:id');
-    //     console.log('selected movie:', details.data);
+    try {
+        const details = yield axios.get(`api/movie/${action.payload}`);
+        console.log('selected movie:', details.data);
 
-    // } catch (err) {
-    //     console.log('error grabbing movieDetails', err);
-    // }
+        // PUT to STORE
+
+    } catch (err) {
+        console.log('error grabbing movieDetails', err);
+    }
 }
 
 

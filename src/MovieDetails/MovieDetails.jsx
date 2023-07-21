@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 
@@ -8,6 +8,9 @@ import { useParams } from 'react-router-dom'
 export default function MovieDetails() {
   const { id } = useParams()
   const dispatch = useDispatch()
+  const movieDetails = useSelector(store => store.movieDetails)
+
+
 
   useEffect(() => {
     dispatch({
@@ -17,9 +20,11 @@ export default function MovieDetails() {
   }, [])
   
   console.log('useParams is', useParams());
+  console.log('movieDetails is', movieDetails);
   return (
     <div>
       <pre>{id}</pre>
+      <pre>{movieDetails}</pre>
       <img src="" alt="" />
       <div>
         <h1>MOVIE TITLE</h1>
