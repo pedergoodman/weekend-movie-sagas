@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom'
 
 
 export default function MovieDetails() {
-  const {paramsInfo} = useParams()
+  const { id } = useParams()
   
-  console.log('paramsInfo is', paramsInfo);
+  console.log('useParams is', useParams());
   return (
     <div>
-      <pre>{paramsInfo}</pre>
+      <pre>{id}</pre>
       <img src="" alt="" />
       <div>
         <h1>MOVIE TITLE</h1>

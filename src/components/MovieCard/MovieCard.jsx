@@ -16,7 +16,7 @@ export default function MovieCard({ movie }) {
 
 
   const handleCardClick = () => {
-    history.push(`/${movie.id}`)
+    history.push(`/${movie.id}/${movie.title}`)
   } // end handleCardClick
 
   

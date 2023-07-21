@@ -13,8 +13,7 @@ function App() {
         </Route>
 
         {/* Details page */}
-        <Route path="/:id">
-
+        <Route path="/:id/:title">
           <MovieDetails />
         </Route>
 
