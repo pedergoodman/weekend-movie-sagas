@@ -61,7 +61,7 @@ const movies = (state = [], action) => {
     }
 }
 
-const movieDetails = (state = [], action) => {
+const movieDetails = (state = {}, action) => {
   switch (action.type) {
     case 'SET_CURRENT_DETAIL':
         return action.payload;
