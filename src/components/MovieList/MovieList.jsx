@@ -16,10 +16,10 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            {/* <h1>MovieList</h1> */}
             <section className="movies">
                 {movies.map(movie => {
-                    return ( <MovieCard key={movie.id} movie={movie}/>
+                    return ( <MovieCard key={movie.movie_id} movie={movie}/>
                     );
                 })}
             </section>
