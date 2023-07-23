@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  /* background-color: rgb(28, 28, 28); */
 }
 
+body {
+  background-color: rgb(28, 28, 28);
+}
 
 .App-header {
   background-color: #222;
