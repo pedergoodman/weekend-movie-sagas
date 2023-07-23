@@ -8,6 +8,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import ImageListItem from "@mui/material/ImageListItem";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 
@@ -25,28 +26,66 @@ export default function MovieDetails() {
 
   console.log("useParams is", useParams());
   console.log("movieDetails is", movieDetails);
+
+  const imageContainerSX = {
+    m: "12px 10px",
+    width: 250,
+    height: 350,
+    boxShadow: "0 0 5px 0px #ffffff80",
+  };
+
+  const detailContainerSX = {
+    display: "flex",
+    alignItems: "center",
+    width: "80%",
+    margin: "auto",
+  };
+
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={detailContainerSX}>
       <CardContent>
-        <CardMedia
-          component="img"
-          sx={{ maxWidth: 320 }}
-          image={movieDetails.poster}
-          title={movieDetails.title}
-        />
+        <Card sx={imageContainerSX}>
+          <CardMedia
+            component="img"
+            sx={{ maxWidth: 320 }}
+            image={movieDetails.poster}
+            title={movieDetails.title}
+          />
+        </Card>
       </CardContent>
 
       <div>
         <CardContent>
-          <Typography gutterBottom variant="h2" component="div">
+          <Typography
+            gutterBottom
+            variant="h3"
+            component="div"
+            sx={{ color: "white", mb: "13px" }}
+          >
             {movieDetails.title}
           </Typography>
-          <Typography gutterBottom variant="p" component="div">
-            {movieDetails.genres}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {movieDetails.description}
-          </Typography>
+          <Box sx={{ m: "auto", width: "fit-content" }}>
+            <Typography
+              gutterBottom
+              variant="p"
+              component="div"
+              sx={{
+                color: "white",
+                mb: "15px",
+                textAlign: "left",
+                padding: "0 0 0 30px",
+              }}
+            >
+              {movieDetails.genres}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ color: "white", textAlign: 'left' }}
+            >
+              {movieDetails.description}
+            </Typography>
+          </Box>
         </CardContent>
       </div>
       {/* <pre>{id}</pre>
