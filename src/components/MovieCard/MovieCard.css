@@ -5,3 +5,10 @@
 .movie-card-container:hover + .movie-card-title {
 display: flex;
 }
+
+
+.css-hk6gwf-MuiImageListItemBar-subtitle	{
+ color: #b4b4b4cc;
+ font-size: 10px;
+ margin-top: 5px;
+}

@@ -58,7 +58,7 @@ export default function MovieCard({ movie }) {
           {isHovered ? <ImageListItemBar
             sx={cardTitleSX}
             title={movie.title}
-            subtitle={movie.genre}
+            subtitle={movie.genres}
           /> : <></> }
           <ImageListItem>
             <img src={movie.poster} alt={movie.title} loading="lazy" />
