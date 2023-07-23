@@ -1,0 +1,7 @@
+.movie-card-title {
+  display: none;
+}
+
+.movie-card-container:hover + .movie-card-title {
+display: flex;
+}
